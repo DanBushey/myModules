@@ -1,0 +1,12 @@
+#!/bin/bash
+echo 'Starting mipaSave'
+mipav="/groups/flyfuncconn/home/busheyd/github2/mipav/mipav"
+mipavScript="/groups/flyfuncconn/home/busheyd/scripts/Python/Modules/resaveFile.sct"
+
+
+[ -f /tier2/flyfuncconn/DanB/r3_ol0020blc10_frup65/20160301_r3_ol0020blc10_frup65_rnai_flyb_00001_regression/RegistrationNSync/PyReg1InverseWarp.nii.gz ] && echo "File exist" || echo "File does not exist"
+[ -f /tier2/flyfuncconn/DanB/r3_ol0020blc10_frup65/20160301_r3_ol0020blc10_frup65_rnai_flyb_00001_regression/RegistrationNSync/PyReg1InverseWarp_MIPAV.nii ] && echo "File exist" || echo "File does not exist"
+#$mipav -inputdir $dir -outputdir $dir -s $mipavScript -i $1 -o $2 -hide
+/groups/flyfuncconn/home/busheyd/github2/mipav/mipav -s SaveImageAs "/tier2/flyfuncconn/DanB/r3_ol0020blc10_frup65/20160301_r3_ol0020blc10_frup65_rnai_flyb_00001_regression/RegistrationNSync/PyReg1InverseWarp.nii.gz, /tier2/flyfuncconn/DanB/r3_ol0020blc10_frup65/20160301_r3_ol0020blc10_frup65_rnai_flyb_00001_regression/RegistrationNSync/PyReg1InverseWarp_MIPAV.nii", "file_type string .nii"
+
+

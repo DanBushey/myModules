@@ -1,0 +1,12 @@
+#!/bin/bash
+echo 'Starting mipaSave'
+mipav="/groups/flyfuncconn/home/busheyd/github2/mipav/mipav"
+mipavScript="/groups/flyfuncconn/home/busheyd/scripts/Python/Modules/resaveFile.sct"
+
+#dir=`pwd`
+echo $1
+echo $2
+[ -f $1 ] && echo "File exist" || echo "File does not exist"
+[ -f $2 ] && echo "File exist" || echo "File does not exist"
+#$mipav -inputdir $dir -outputdir $dir -s $mipavScript -i $1 -o $2 -hide
+$mipav -s $mipavScript -i $1 -o $2 -hide

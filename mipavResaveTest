@@ -1,0 +1,10 @@
+#!/bin/bash
+echo 'Starting mipaSave'
+mipav="/groups/flyfuncconn/home/busheyd/github2/mipav/mipav"
+mipavScript="/groups/flyfuncconn/home/busheyd/scripts/Python/Modules/resaveFile.sct"
+
+#dir=`pwd`
+echo $1
+echo $2
+#$mipav -inputdir $dir -outputdir $dir -s $mipavScript -i $1 -o $2 -hide
+$mipav -s $mipavScript -i '/tier2/flyfuncconn/DanB/r3_ol0020blc10_frup65/20160301_r3_ol0020blc10_frup65_rnai_flyb_00001_regression/RegistrationNSync/PyReg1InverseWarp.nii.gz' -o '/tier2/flyfuncconn/DanB/r3_ol0020blc10_frup65/20160301_r3_ol0020blc10_frup65_rnai_flyb_00001_regression/RegistrationNSync/PyReg1InverseWarp_MIPAV.nii' -hide
